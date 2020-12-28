@@ -1,8 +1,16 @@
 import React from 'react'
-import { Root } from './styled'
+import { FyzuText, Logo, Root, Shuriken1 } from './styled'
+import Background from '@/components/Background'
 
 function MainBlock() {
-  return <Root>Main Block</Root>
+  return (
+    <Root>
+      <Background />
+      <Logo />
+      <FyzuText />
+      <Shuriken1 />
+    </Root>
+  )
 }
 
 export default MainBlock
