@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "allowUnusedLabels": true,
+    "baseUrl": ".",
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "declaration": true,
+    "jsx": "preserve",
+    "lib": [
+      "dom",
+      "es2015",
+      "esnext"
+    ],
+    "module": "commonjs",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "outDir": "dist/ts",
+    "types": [
+      "react",
+      "node"
+    ],
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "removeComments": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2017",
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true
+  },
+  "include": [
+    "src/**/*",
+    "types/**/*"
+  ],
+  "exclude": [
+    "dist",
+    "__tests__",
+    "@types/react-native"
+  ]
+}
