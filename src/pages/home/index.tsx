@@ -1,12 +1,12 @@
 import React from 'react'
 import MainBlock from '@/components/MainBlock'
+import { Root } from './styled'
 
 function HomePage() {
   return (
-    <>
-      Home Page
+    <Root>
       <MainBlock />
-    </>
+    </Root>
   )
 }
 
