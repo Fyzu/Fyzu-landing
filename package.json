@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "format": "prettier --write '{src,types}/**/*.{json,{j,t}s{,x},css,s{c,a}ss}'"
+    "format": "prettier --write 'src/**/*.{json,{j,t}s{,x},css,s{c,a}ss}'"
   },
   "dependencies": {
     "next": "10.0.4",

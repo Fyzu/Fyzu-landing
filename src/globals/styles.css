@@ -1,0 +1,8 @@
+@import '~normalize.css';
+
+@font-face {
+  font-family: 'Furore';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Furore'), url('/fonts/Furore.woff') format('woff');
+}

@@ -1,15 +1,18 @@
-import '../styles/globals.css'
 import React from 'react'
+import { AppProps } from 'next/app'
+import { ThemeProvider } from 'styled-components'
 
-export interface IPageProps {}
+import '@/globals/styles.css'
+import { GlobalStyle } from '@/globals/styles'
+import theme from '@/globals/theme'
 
-export interface IAppProps {
-  Component: React.FC<IPageProps>
-  pageProps: IPageProps
-}
-
-function App({ Component, pageProps }: IAppProps) {
-  return <Component {...pageProps} />
+function App({ Component, pageProps }: AppProps) {
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <Component {...pageProps} />
+    </ThemeProvider>
+  )
 }
 
 export default App

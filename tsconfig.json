@@ -7,23 +7,14 @@
     "esModuleInterop": true,
     "declaration": true,
     "jsx": "preserve",
-    "lib": [
-      "dom",
-      "es2015",
-      "esnext"
-    ],
+    "lib": ["dom", "es2015", "esnext"],
     "module": "commonjs",
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "outDir": "dist/ts",
-    "types": [
-      "react",
-      "node"
-    ],
+    "types": ["react", "node"],
     "paths": {
-      "@/*": [
-        "src/*"
-      ]
+      "@/*": ["src/*"]
     },
     "removeComments": true,
     "sourceMap": true,
@@ -36,13 +27,6 @@
     "resolveJsonModule": true,
     "isolatedModules": true
   },
-  "include": [
-    "src/**/*",
-    "types/**/*"
-  ],
-  "exclude": [
-    "dist",
-    "__tests__",
-    "@types/react-native"
-  ]
+  "include": ["src/**/*"],
+  "exclude": ["dist", "__tests__", "@types/react-native"]
 }

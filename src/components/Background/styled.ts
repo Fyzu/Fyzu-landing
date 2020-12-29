@@ -33,13 +33,13 @@ export const ColorMain = styled.div`
 `
 
 export const ColorGrey = styled.div`
-  background-color: #1A1A1A;
+  background-color: #1a1a1a;
   z-index: -1;
   flex-grow: 1;
 `
 
 export const ColorBlue = styled.div`
-  background-color: #002D48;
+  background-color: #002d48;
   z-index: -1;
   flex-grow: 1;
 `
