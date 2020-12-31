@@ -1,5 +1,5 @@
 import React from 'react'
-import Background from '@/components/Background'
+
 import { HistoryWrapper, HistoryItem, Root, Title, Description } from './styled'
 
 const HISTORY_ITEMS: { title: string; description: React.ReactNode }[] = [
@@ -68,8 +68,6 @@ const HISTORY_ITEMS: { title: string; description: React.ReactNode }[] = [
 function HistoryBlock() {
   return (
     <Root>
-      <Background color="grey" />
-
       <HistoryWrapper>
         {HISTORY_ITEMS.map(({ title, description }, index) => (
           <HistoryItem key={index} position={index % 2 ? 'left' : 'right'}>

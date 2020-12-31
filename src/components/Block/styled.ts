@@ -1,6 +1,10 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
-export const Root = styled.figure`
+export const Root = styled.section`
+  position: relative;
+`
+
+export const Background = styled.figure`
   position: absolute;
   height: 100%;
   width: 100%;
@@ -12,7 +16,7 @@ export const Root = styled.figure`
   flex-direction: column;
 `
 
-export const Image = styled.img`
+export const BackgroundImage = styled.div<{ isMain: boolean }>`
   display: block;
   position: absolute;
   top: 0;
@@ -24,6 +28,11 @@ export const Image = styled.img`
   background-color: transparent;
   background-image: url('/images/background-texture.png');
   background-size: cover;
+  
+  ${props => props.isMain && css`
+    // filter: invert(1%) sepia(1%) saturate(1%) hue-rotate(1deg) brightness(1000%) contrast(80%); // TODO: experiment
+    transform: rotate(180deg);
+`}
 `
 
 export const ColorMain = styled.div`

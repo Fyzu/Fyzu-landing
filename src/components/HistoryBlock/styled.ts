@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import Block from '@/components/Block'
 
-export const Root = styled.section`
+export const Root = styled(Block).attrs({ color: 'grey' })`
   position: relative;
   display: flex;
   padding: 7.2rem 10rem 5.7rem;

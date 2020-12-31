@@ -1,19 +1,18 @@
 import styled from 'styled-components'
 import Shuriken from '@/components/Shuriken'
+import Block from '@/components/Block'
 
-export const Root = styled.section`
-  position: relative;
-  width: 100%;
-  min-height: 50rem;
+export const Root = styled(Block).attrs({ color: 'main' })`
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 50rem;
 `
 
 export const Logo = styled.img.attrs({
   src: '/images/logo.svg',
 })`
-  height: 34rem;
+  height: 35rem;
   width: 35rem;
   object-fit: contain;
 `
@@ -31,6 +30,7 @@ export const FyzuText = styled.img.attrs({
 
 export const Shuriken1 = styled(Shuriken).attrs({
   size: 4.1,
+  rotate: -30,
 })`
   position: absolute;
   top: 6rem;
