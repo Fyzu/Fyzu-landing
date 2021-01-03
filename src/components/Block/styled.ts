@@ -32,11 +32,12 @@ export const BackgroundImage = styled.div<{ isMain: boolean }>`
   ${props => props.isMain && css`
     // filter: invert(1%) sepia(1%) saturate(1%) hue-rotate(1deg) brightness(1000%) contrast(80%); // TODO: experiment
     transform: rotate(180deg);
+    mix-blend-mode: soft-light;
 `}
 `
 
 export const ColorMain = styled.div`
-  background: linear-gradient(270deg, #023268 0%, #169aff 100%);
+  background: linear-gradient(270deg, #023268 0%, #258ad8 100%);
   z-index: -1;
   flex-grow: 1;
 `
