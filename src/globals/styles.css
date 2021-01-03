@@ -6,3 +6,7 @@
   font-weight: 400;
   src: local('Furore'), url('/fonts/Furore.woff') format('woff');
 }
+
+* {
+  box-sizing: border-box;
+}

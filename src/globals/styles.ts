@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     font-family: ${(props) => props.theme.fontFamily};
     font-size: 1rem;
-    line-height: 1;
+    line-height: 1.2;
     color: ${(props) => props.theme.color.white};
     background-color: ${(props) => props.theme.color.grey};
   }

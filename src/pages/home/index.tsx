@@ -1,6 +1,7 @@
 import React from 'react'
 import MainBlock from '@/components/MainBlock'
 import HistoryBlock from '@/components/HistoryBlock'
+import YoutubeBlock from '@/components/YoutubeBlock'
 
 import { Root } from './styled'
 
@@ -9,6 +10,7 @@ function HomePage() {
     <Root>
       <MainBlock />
       <HistoryBlock />
+      <YoutubeBlock />
     </Root>
   )
 }
