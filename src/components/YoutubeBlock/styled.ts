@@ -78,5 +78,14 @@ export const Video = styled.iframe.attrs({
   allow: 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture',
   allowfullscreen: true,
 })`
-  border: ${rem(10)} solid #0B99F0;
+  padding: ${rem(10)};
+  border: none;
+  background-color: #0B99F0;
+`
+
+export const Footer = styled.div`
+  display: flex;
+  align-items: flex-start;
+  margin-top: ${rem(25)};
+  margin-left: ${rem(27)};
 `
