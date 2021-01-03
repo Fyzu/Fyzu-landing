@@ -1,10 +1,19 @@
 import styled from 'styled-components'
 import Block from '@/components/Block'
+import { rem } from '@/utils'
 
 export const Root = styled(Block).attrs({ color: 'grey' })`
   position: relative;
   display: flex;
-  padding: 7.2rem 10rem 5.7rem;
+  padding-bottom: ${rem(102)};
+  padding-top: ${rem(155)};
+  padding-left: ${rem(183)};
+  padding-right: ${rem(183)};
+  
+  background-image: url('/images/fyzu-photo.png');
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: auto 85%;
 `
 
 export const HistoryWrapper = styled.ul`
