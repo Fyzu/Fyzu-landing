@@ -80,12 +80,12 @@ export const Video = styled.iframe.attrs({
 })`
   padding: ${rem(10)};
   border: none;
-  background-color: #0B99F0;
+  background-color: #0b99f0;
 `
 
 export const Footer = styled.div`
   display: flex;
   align-items: flex-start;
   margin-top: ${rem(25)};
-  margin-left: ${rem(27)};
+  margin-left: ${rem(13)};
 `

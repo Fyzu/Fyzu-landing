@@ -1,7 +1,16 @@
 import React from 'react'
 import Button from '@/components/Button'
 
-import { BackgroundTexture, Content, Root, Title, YouTubeIcon, Video, VideoWrapper, Footer } from './styled'
+import {
+  BackgroundTexture,
+  Content,
+  Root,
+  Title,
+  YouTubeIcon,
+  Video,
+  VideoWrapper,
+  Footer,
+} from './styled'
 
 function YoutubeBlock() {
   return (
