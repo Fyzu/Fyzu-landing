@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import Shuriken from '@/components/Shuriken'
 import Block from '@/components/Block'
 import { rem } from '@/utils'
+import FyzuTextBase from '@/components/FyzuText'
 
 export const Root = styled(Block).attrs({ color: 'main' })`
   display: flex;
@@ -18,15 +19,12 @@ export const Logo = styled.img.attrs({
   object-fit: contain;
 `
 
-export const FyzuText = styled.img.attrs({
-  src: '/images/fyzu-text.svg',
-})`
+export const FyzuText = styled(FyzuTextBase)`
   position: absolute;
   right: ${rem(106)};
   top: ${rem(98)};
   height: ${rem(216)};
   width: ${rem(301)};
-  object-fit: contain;
 `
 
 export const Shuriken1 = styled(Shuriken).attrs({
