@@ -9,7 +9,7 @@ export const Root = styled(Block).attrs({ color: 'grey' })`
   padding-top: ${rem(155)};
   padding-left: ${rem(183)};
   padding-right: ${rem(183)};
-  
+
   background-image: url('/images/fyzu-photo.png');
   background-position: right bottom;
   background-repeat: no-repeat;
