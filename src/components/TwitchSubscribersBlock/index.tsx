@@ -15,6 +15,7 @@ import {
   SubTitle,
   Footer,
   Description,
+  Heart,
 } from './styled'
 import Button from '@/components/Button'
 
@@ -62,11 +63,11 @@ function TwitchSubscribersBlock(props: ISubscribersBlockProps) {
       </Content>
       <Footer>
         <Description>
-          Ты тоже можешь поддержать меня<br />
-          и стать частью сообщества
+          Ты тоже можешь поддержать меня
+          <br />и стать частью сообщества
         </Description>
         <Button as="a" href="https://www.twitch.tv/products/thefyzu" target="_blank">
-          Подписаться
+          <Heart /> Подписаться
         </Button>
       </Footer>
     </Root>

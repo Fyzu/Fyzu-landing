@@ -8,6 +8,7 @@ import HistoryBlock from '@/components/HistoryBlock'
 import YoutubeBlock from '@/components/YoutubeBlock'
 import SocialsBlock from '@/components/SocialsBlock'
 import SubscribersBlock from '@/components/TwitchSubscribersBlock'
+import GameBlock from '@/components/GameBlock'
 
 import { ITwitchSubscriber } from '@/interfaces'
 
@@ -26,6 +27,7 @@ function HomePage(props: IHomePageProps) {
       <MainBlock />
       <HistoryBlock />
       <YoutubeBlock />
+      <GameBlock />
       {props.subs.length > 0 && <SubscribersBlock subs={props.subs} />}
       <SocialsBlock />
     </Root>

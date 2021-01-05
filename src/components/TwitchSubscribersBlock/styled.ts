@@ -94,3 +94,12 @@ export const Description = styled.p`
   margin: 0;
   font-size: ${rem(24)};
 `
+
+export const Heart = styled.img.attrs({
+  src: '/images/heart.svg',
+})`
+  display: inline;
+  height: auto;
+  width: ${rem(24)};
+  margin-right: ${rem(11)};
+`
