@@ -1,4 +1,5 @@
 @import '~normalize.css';
+@import './slick.css';
 
 @font-face {
   font-family: 'Furore';
