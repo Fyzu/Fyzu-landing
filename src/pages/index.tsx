@@ -1,5 +1,5 @@
 import React from 'react'
-import { GetServerSidePropsResult } from 'next'
+import { GetStaticPropsResult } from 'next'
 import styled from 'styled-components'
 import { ApiClient, StaticAuthProvider } from 'twitch'
 
@@ -34,7 +34,7 @@ function HomePage(props: IHomePageProps) {
   )
 }
 
-export async function getServerSideProps(): Promise<GetServerSidePropsResult<IHomePageProps>> {
+export async function getStaticProps(): Promise<GetStaticPropsResult<IHomePageProps>> {
   const twitchAccessToken = process.env.TWITCH_ACCESS_TOKEN
   if (!twitchAccessToken) {
     throw new Error('Access token required')
@@ -72,6 +72,7 @@ export async function getServerSideProps(): Promise<GetServerSidePropsResult<IHo
       props: {
         subs,
       },
+      revalidate: 60 * 60 * 24, // 1 day
     }
   } catch (error) {
     console.error(error)
@@ -81,6 +82,7 @@ export async function getServerSideProps(): Promise<GetServerSidePropsResult<IHo
     props: {
       subs: [],
     },
+    revalidate: 60 * 60, // 1 hour
   }
 }
 
