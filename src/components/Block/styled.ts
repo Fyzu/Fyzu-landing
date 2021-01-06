@@ -26,8 +26,12 @@ export const BackgroundImage = styled.div<{ isMain: boolean }>`
   margin: 0;
 
   background-color: transparent;
-  background-image: url('/images/background-texture.png');
   background-size: cover;
+  background-image: url('/images/background-texture@1x.png');
+  
+  ${props => props.theme.retina} {
+    background-image: url('/images/background-texture@3x.png');
+  }
 
   ${(props) =>
     props.isMain &&
