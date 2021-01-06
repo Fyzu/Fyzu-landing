@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import Block from '@/components/Block'
 import { rem } from '@/utils'
 import FyzuText from '@/components/FyzuText'
+import Shuriken from '@/components/Shuriken'
 
 export const Root = styled(Block).attrs({
   color: 'grey',
@@ -49,4 +50,68 @@ export const Socials = styled.div`
   justify-content: space-between;
   width: ${rem(195 + 195 + 672)};
   margin-top: ${rem(112)};
+`
+
+export const ProPlayerCircle = styled.div`
+  position: absolute;
+  right: ${rem(140)};
+  bottom: ${rem(50)};
+  width: ${rem(226)};
+  height: ${rem(226)};
+  background-image: url('/images/pro-player-circle.svg');
+  background-size: contain;
+`
+
+export const Shuriken1 = styled(Shuriken).attrs({
+  size: rem(75),
+  rotate: -30,
+})`
+  position: absolute;
+  top: ${rem(218)};
+  left: ${rem(121)};
+`
+
+export const Shuriken2 = styled(Shuriken).attrs({
+  size: rem(45),
+  rotate: 0,
+})`
+  position: absolute;
+  bottom: ${rem(64)};
+  right: ${rem(84)};
+`
+
+export const Shuriken3 = styled(Shuriken).attrs({
+  size: rem(44),
+  rotate: -35,
+})`
+  position: absolute;
+  bottom: ${rem(127)};
+  right: ${rem(491)};
+`
+
+export const Shuriken4 = styled(Shuriken).attrs({
+  size: rem(58),
+  rotate: 0,
+})`
+  position: absolute;
+  bottom: ${rem(138)};
+  left: ${rem(210)};
+`
+
+export const Shuriken5 = styled(Shuriken).attrs({
+  size: rem(50),
+  rotate: -15,
+})`
+  position: absolute;
+  top: ${rem(241)};
+  right: ${rem(333)};
+`
+
+export const Shuriken6 = styled(Shuriken).attrs({
+  size: rem(22),
+  rotate: -30,
+})`
+  position: absolute;
+  top: ${rem(255)};
+  left: ${rem(404)};
 `

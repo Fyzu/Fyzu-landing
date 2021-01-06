@@ -1,6 +1,8 @@
 import React from 'react'
-import { Root, Title, FyzuTextBackground, Content, Socials } from './styled'
 import SocialButton from '@/components/SocialButton'
+
+import { Root, Title, FyzuTextBackground, Content, Socials, ProPlayerCircle, Shuriken1, Shuriken2, Shuriken3, Shuriken4, Shuriken5, Shuriken6} from './styled'
+import { FyzuText } from '@/components/MainBlock/styled'
 
 function SocialsBlock() {
   return (
@@ -21,6 +23,14 @@ function SocialsBlock() {
           <SocialButton social="discord" />
         </Socials>
       </Content>
+
+      <ProPlayerCircle />
+      <Shuriken1 />
+      <Shuriken2 />
+      <Shuriken3 />
+      <Shuriken4 />
+      <Shuriken5 />
+      <Shuriken6 />
     </Root>
   )
 }
