@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Block from '@/components/Block'
 import { rem } from '@/utils'
+import Shuriken from '@/components/Shuriken'
 
 export const Root = styled(Block).attrs({ color: 'grey' })`
   position: relative;
@@ -74,4 +75,22 @@ export const Description = styled.p`
   b {
     color: ${(props) => props.theme.color.blue};
   }
+`
+
+export const Shuriken1 = styled(Shuriken).attrs({
+  size: rem(35),
+  rotate: -30,
+})`
+  position: absolute;
+  bottom: ${rem(212)};
+  left: ${rem(134)};
+`
+
+export const Shuriken2 = styled(Shuriken).attrs({
+  size: rem(21),
+  rotate: 0,
+})`
+  position: absolute;
+  top: ${rem(179)};
+  right: ${rem(622)};
 `

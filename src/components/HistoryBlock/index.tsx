@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { HistoryWrapper, HistoryItem, Root, Title, Description } from './styled'
+import { HistoryWrapper, HistoryItem, Root, Title, Description, Shuriken1, Shuriken2 } from './styled'
 
 const HISTORY_ITEMS: { title: string; description: React.ReactNode }[] = [
   {
@@ -76,6 +76,8 @@ function HistoryBlock() {
           </HistoryItem>
         ))}
       </HistoryWrapper>
+      <Shuriken1 />
+      <Shuriken2 />
     </Root>
   )
 }
