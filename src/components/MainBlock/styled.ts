@@ -13,6 +13,7 @@ export const Root = styled(Block).attrs({ color: 'main' })`
 
 export const Logo = styled.img.attrs({
   src: '/images/logo.svg',
+  alt: 'Fyzu logo',
 })`
   height: ${rem(631)};
   width: ${rem(631)};
@@ -99,13 +100,13 @@ export const Shuriken8 = styled(Shuriken).attrs({
   left: ${rem(635)};
 `
 
-export const Hello = styled.img.attrs({
-  src: '/images/hello.svg',
-})`
+export const Hello = styled.div`
   position: absolute;
   width: ${rem(498)};
   height: ${rem(93)};
   bottom: ${rem(75)};
   left: ${rem(234)};
-  object-fit: cover;
+  background-image: url('/images/hello.svg');
+  background-position: center;
+  background-size: cover;
 `

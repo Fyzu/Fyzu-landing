@@ -34,13 +34,12 @@ export const Title = styled.h4`
   margin: 0;
 `
 
-export const YouTubeIcon = styled.img.attrs({
-  src: '/images/youtube.svg',
-})`
+export const YouTubeIcon = styled.div`
   display: inline;
   height: ${rem(50)};
   width: ${rem(71)};
-  object-fit: contain;
+  background-image: url('/images/youtube.svg');
+  background-size: contain;
   margin-left: ${rem(13)};
   margin-bottom: ${rem(3)};
 `

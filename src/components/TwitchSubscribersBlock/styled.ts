@@ -67,13 +67,12 @@ export const Title = styled.h4`
   margin: 0 0 ${rem(5)};
 `
 
-export const Image = styled.img.attrs({
-  src: '/images/fyzu-pog.png',
-})`
+export const Image = styled.div`
   height: ${rem(112)};
   width: ${rem(112)};
   margin-right: ${rem(11)};
-  object-fit: contain;
+  background-image: url('/images/fyzu-pog.png');
+  background-size: contain;
 `
 
 export const SubTitle = styled.span`
@@ -95,11 +94,13 @@ export const Description = styled.p`
   font-size: ${rem(24)};
 `
 
-export const Heart = styled.img.attrs({
-  src: '/images/heart.svg',
-})`
+export const Heart = styled.div`
   display: inline;
-  height: auto;
+  height: ${rem(22)};
   width: ${rem(24)};
+  background-image: url('/images/heart.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   margin-right: ${rem(11)};
 `

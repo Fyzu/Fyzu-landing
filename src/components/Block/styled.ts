@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { retina } from '@/utils'
 
 export const Root = styled.section`
   position: relative;
@@ -27,6 +28,7 @@ export const BackgroundImage = styled.div<{ isMain: boolean }>`
 
   background-color: transparent;
   background-size: cover;
+  background-position: center;
   background-image: url('/images/background-texture@1x.png');
   
   ${retina(2)} {

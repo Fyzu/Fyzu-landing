@@ -5,12 +5,11 @@ export interface IShurikenProps {
   rotate?: number
 }
 
-const Shuriken = styled.img.attrs({
-  src: '/images/shuriken.svg',
-})<IShurikenProps>`
+const Shuriken = styled.div<IShurikenProps>`
   width: ${(props) => props.size};
   height: ${(props) => props.size};
-  object-fit: contain;
+  background-image: url('/images/shuriken.svg');
+  background-size: contain;
   transform: rotate(${(props) => props.rotate || 0}deg);
 `
 
