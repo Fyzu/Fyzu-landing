@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components'
+import { styled } from '@linaria/react'
+import { retina } from '@/utils'
 
 export const Root = styled.section`
   position: relative;
@@ -33,13 +34,8 @@ export const BackgroundImage = styled.div<{ isMain: boolean }>`
     background-image: url('/images/background-texture@3x.png');
   }
 
-  ${(props) =>
-    props.isMain &&
-    css`
-      // filter: invert(1%) sepia(1%) saturate(1%) hue-rotate(1deg) brightness(1000%) contrast(80%); // TODO: experiment
-      transform: rotate(180deg);
-      mix-blend-mode: soft-light;
-    `}
+  transform: ${(props) => (props.isMain ? 'rotate(180deg)' : 'none')};
+  mix-blend-mode: ${(props) => (props.isMain ? 'soft-light' : 'initial')};
 `
 
 export const ColorMain = styled.div`
