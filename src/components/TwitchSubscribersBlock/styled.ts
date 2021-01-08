@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import Image from 'next/image'
+
 import Block from '@/components/Block'
 import { rem } from '@/utils'
 
@@ -69,12 +71,18 @@ export const Title = styled.h4`
   margin: 0 0 ${rem(5)};
 `
 
-export const Image = styled.div`
+export const Icon = styled.div`
+  position: relative;
   height: ${rem(112)};
   width: ${rem(112)};
   margin-right: ${rem(11)};
-  background-image: url('/images/fyzu-pog.png');
-  background-size: contain;
+`
+
+export const IconImage = styled(Image).attrs({
+  src: '/images/fyzu-pog.png',
+  layout: 'fill',
+})`
+  object-fit: contain;
 `
 
 export const SubTitle = styled.span`

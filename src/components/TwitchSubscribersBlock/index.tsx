@@ -14,7 +14,8 @@ import {
   SliderItem,
   Header,
   Title,
-  Image,
+  Icon,
+  IconImage,
   SubTitle,
   Footer,
   Description,
@@ -56,7 +57,9 @@ function TwitchSubscribersBlock(props: ISubscribersBlockProps) {
   return (
     <Root ref={rootRef}>
       <Header>
-        <Image />
+        <Icon>
+          <IconImage />
+        </Icon>
         <Title>
           Спасибо за поддержку
           <SubTitle>Список подписчиков на Twitch</SubTitle>
