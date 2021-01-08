@@ -15,7 +15,7 @@ import {
 } from './styled'
 
 function YoutubeBlock() {
-  const [rootRef, isVisible] = useInView()
+  const [rootRef, isVisible] = useInView({ triggerOnce: true })
 
   return (
     <Root ref={rootRef}>

@@ -39,7 +39,7 @@ const SLIDER_SETTINGS: SliderSettings = {
 }
 
 function TwitchSubscribersBlock(props: ISubscribersBlockProps) {
-  const [rootRef, isVisible] = useInView()
+  const [rootRef, isVisible] = useInView({ triggerOnce: true })
 
   return (
     <Root ref={rootRef}>
