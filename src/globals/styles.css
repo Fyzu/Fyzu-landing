@@ -5,6 +5,7 @@
   font-family: 'Furore';
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: local('Furore'), url('/fonts/Furore.woff') format('woff');
 }
 
