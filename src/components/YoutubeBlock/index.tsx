@@ -1,4 +1,6 @@
 import React from 'react'
+import { useInView } from 'react-intersection-observer'
+
 import Button from '@/components/Button'
 
 import {
@@ -13,15 +15,17 @@ import {
 } from './styled'
 
 function YoutubeBlock() {
+  const [rootRef, isVisible] = useInView()
+
   return (
-    <Root>
+    <Root ref={rootRef}>
       <BackgroundTexture />
       <Title>
         Последний ролик <YouTubeIcon />
       </Title>
       <Content>
         <VideoWrapper>
-          <Video src="https://www.youtube.com/embed?max-results=1&&rel=0&listType=user_uploads&list=TheFyzu" />
+          {isVisible && <Video src="https://www.youtube.com/embed?max-results=1&&rel=0&listType=user_uploads&list=TheFyzu" />}
         </VideoWrapper>
       </Content>
       <Footer>
