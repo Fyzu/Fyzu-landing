@@ -11,7 +11,7 @@ export const Background = styled.figure`
   top: 0;
   left: 0;
   margin: 0;
-  // z-index: -1;
+  z-index: -50;
   display: flex;
   flex-direction: column;
 `

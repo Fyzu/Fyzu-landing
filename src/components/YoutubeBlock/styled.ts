@@ -58,9 +58,9 @@ export const Content = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    min-height: ${rem(629)};
     background-color: #fff;
-    z-index: -60;
+    mix-blend-mode: color-dodge;
+    z-index: -1;
   }
 `
 
