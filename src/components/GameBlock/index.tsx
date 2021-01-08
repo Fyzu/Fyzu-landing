@@ -7,7 +7,8 @@ function GameBlock() {
       <Content>
         <Background />
         <Title>
-          Aim игра пока недоступна<br />
+          Aim игра пока недоступна
+          <br />
           скоро будет :)
         </Title>
       </Content>

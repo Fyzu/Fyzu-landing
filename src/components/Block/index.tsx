@@ -13,7 +13,7 @@ function Block({ color = 'main', className, children }: IBlockProps, ref: any) {
     <Root ref={ref} className={className}>
       <Background>
         <BackgroundImage isMain={color === 'main'}>
-          <Image src='/images/background-texture.png' layout='fill' />
+          <Image src="/images/background-texture.png" layout="fill" />
         </BackgroundImage>
         {color === 'grey' && <ColorGrey />}
         {color === 'blue' && <ColorBlue />}

@@ -1,7 +1,20 @@
 import React from 'react'
 import SocialButton from '@/components/SocialButton'
 
-import { Root, Title, FyzuTextBackground, Content, Socials, ProPlayerCircle, Shuriken1, Shuriken2, Shuriken3, Shuriken4, Shuriken5, Shuriken6 } from './styled'
+import {
+  Root,
+  Title,
+  FyzuTextBackground,
+  Content,
+  Socials,
+  ProPlayerCircle,
+  Shuriken1,
+  Shuriken2,
+  Shuriken3,
+  Shuriken4,
+  Shuriken5,
+  Shuriken6,
+} from './styled'
 
 function SocialsBlock() {
   return (

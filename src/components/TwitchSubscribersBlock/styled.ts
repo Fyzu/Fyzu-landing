@@ -35,12 +35,12 @@ export const UserAvatar = styled.div<{ avatar?: string }>`
   width: ${rem(96)};
   height: ${rem(96)};
   border-radius: 50%;
-  background-image: url('${props => props.avatar || '/images/shuriken.svg'}');
+  background-image: url('${(props) => props.avatar || '/images/shuriken.svg'}');
   background-size: cover;
   background-position: center;
-  border: ${rem(4)} solid #0B99F0;
+  border: ${rem(4)} solid #0b99f0;
   background-color: #111;
-  box-shadow: 0 0 ${rem(9)} ${rem(3)} #1098EC;
+  box-shadow: 0 0 ${rem(9)} ${rem(3)} #1098ec;
   z-index: 1;
 `
 
@@ -78,7 +78,7 @@ export const Image = styled.div`
 `
 
 export const SubTitle = styled.span`
-  color: #0B99F0;
+  color: #0b99f0;
   font-size: ${rem(24)};
   line-height: 1;
   margin-top: ${rem(8)};

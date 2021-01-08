@@ -25,7 +25,9 @@ function YoutubeBlock() {
       </Title>
       <Content>
         <VideoWrapper>
-          {isVisible && <Video src="https://www.youtube.com/embed?max-results=1&&rel=0&listType=user_uploads&list=TheFyzu" />}
+          {isVisible && (
+            <Video src="https://www.youtube.com/embed?max-results=1&&rel=0&listType=user_uploads&list=TheFyzu" />
+          )}
         </VideoWrapper>
       </Content>
       <Footer>

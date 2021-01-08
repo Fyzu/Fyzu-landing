@@ -20,7 +20,7 @@ export const Root = styled.a<{ social: Social }>`
   border-radius: 25%;
   text-decoration: none;
   border: 3px solid ${(props) => COLOR_MAP[props.social]};
-  
+
   background-image: url('/images/socials/${(props) => props.social}.svg');
   background-size: ${rem(90)};
   background-repeat: no-repeat;
