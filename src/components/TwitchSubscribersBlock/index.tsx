@@ -1,5 +1,6 @@
 import React from 'react'
-import Slider, { Settings as SliderSettings } from 'react-slick'
+import dynamic from 'next/dynamic'
+import { Settings as SliderSettings } from 'react-slick'
 import { useInView } from 'react-intersection-observer'
 
 import { ITwitchSubscriber } from '@/interfaces'
@@ -21,11 +22,14 @@ import {
 } from './styled'
 import Button from '@/components/Button'
 
+const Slider = dynamic(() => import('react-slick'))
+
 export interface ISubscribersBlockProps {
   subs: ITwitchSubscriber[]
 }
 
 const SLIDER_SETTINGS: SliderSettings = {
+  autoplay: true,
   dots: false,
   centerPadding: '0',
   infinite: true,
@@ -51,16 +55,18 @@ function TwitchSubscribersBlock(props: ISubscribersBlockProps) {
         </Title>
       </Header>
       <Content>
-        <Slider {...SLIDER_SETTINGS} autoplay={isVisible}>
-          {props.subs.map((sub) => (
-            <SliderItem key={sub.name}>
-              <User>
-                <UserAvatar avatar={isVisible ? sub.avatar : undefined} />
-                <UserName>{sub.name}</UserName>
-              </User>
-            </SliderItem>
-          ))}
-        </Slider>
+        {isVisible && (
+          <Slider {...SLIDER_SETTINGS}>
+            {props.subs.map((sub) => (
+              <SliderItem key={sub.name}>
+                <User>
+                  <UserAvatar avatar={isVisible ? sub.avatar : undefined} />
+                  <UserName>{sub.name}</UserName>
+                </User>
+              </SliderItem>
+            ))}
+          </Slider>
+        )}
       </Content>
       <Footer>
         <Description>
