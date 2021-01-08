@@ -1,10 +1,11 @@
 import React from 'react'
-import { Content, Root, Title } from './styled'
+import { Content, Root, Title, Background } from './styled'
 
 function GameBlock() {
   return (
     <Root>
       <Content>
+        <Background />
         <Title>
           Aim игра пока недоступна<br />
           скоро будет :)
