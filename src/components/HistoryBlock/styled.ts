@@ -1,7 +1,7 @@
 import styled from 'styled-components'
+import Shuriken from '@/components/Shuriken'
 import Block from '@/components/Block'
 import { rem } from '@/utils'
-import Shuriken from '@/components/Shuriken'
 
 export const Root = styled(Block).attrs({ color: 'grey' })`
   position: relative;
@@ -15,6 +15,13 @@ export const Root = styled(Block).attrs({ color: 'grey' })`
   background-position: right bottom;
   background-repeat: no-repeat;
   background-size: auto 85%;
+`
+
+export const Photo = styled.div`
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 85%;
 `
 
 export const HistoryWrapper = styled.ul`

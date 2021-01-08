@@ -1,6 +1,16 @@
 import React from 'react'
+import Image from 'next/image'
 
-import { HistoryWrapper, HistoryItem, Root, Title, Description, Shuriken1, Shuriken2 } from './styled'
+import {
+  HistoryWrapper,
+  HistoryItem,
+  Root,
+  Title,
+  Description,
+  Shuriken1,
+  Shuriken2,
+  Photo,
+} from './styled'
 
 const HISTORY_ITEMS: { title: string; description: React.ReactNode }[] = [
   {
@@ -68,6 +78,9 @@ const HISTORY_ITEMS: { title: string; description: React.ReactNode }[] = [
 function HistoryBlock() {
   return (
     <Root>
+      <Photo>
+        <Image src="/images/fyzu-photo.png" layout="fill" />
+      </Photo>
       <HistoryWrapper>
         {HISTORY_ITEMS.map(({ title, description }, index) => (
           <HistoryItem key={index} position={index % 2 ? 'left' : 'right'}>
