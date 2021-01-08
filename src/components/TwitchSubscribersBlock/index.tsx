@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import dynamic from 'next/dynamic'
 import { Settings as SliderSettings } from 'react-slick'
 import { useInView } from 'react-intersection-observer'
@@ -40,10 +40,18 @@ const SLIDER_SETTINGS: SliderSettings = {
   slidesToScroll: 1,
   nextArrow: <></>,
   prevArrow: <></>,
-}
+} as const
 
 function TwitchSubscribersBlock(props: ISubscribersBlockProps) {
   const [rootRef, isVisible] = useInView({ triggerOnce: true })
+
+  const subs = useMemo(() => {
+    const itemsOnScreen = SLIDER_SETTINGS.rows || 1
+
+    const neededItems = (Math.ceil(props.subs.length / itemsOnScreen) * itemsOnScreen) - props.subs.length
+
+    return props.subs.concat(props.subs.slice(0, neededItems))
+  }, [props.subs])
 
   return (
     <Root ref={rootRef}>
@@ -57,8 +65,8 @@ function TwitchSubscribersBlock(props: ISubscribersBlockProps) {
       <Content>
         {isVisible && (
           <Slider {...SLIDER_SETTINGS}>
-            {props.subs.map((sub) => (
-              <SliderItem key={sub.name}>
+            {subs.map((sub, index) => (
+              <SliderItem key={index}>
                 <User>
                   <UserAvatar avatar={isVisible ? sub.avatar : undefined} />
                   <UserName>{sub.name}</UserName>
