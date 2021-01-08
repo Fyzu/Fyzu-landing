@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components'
-import { retina } from '@/utils'
 
 export const Root = styled.section`
   position: relative;
@@ -12,7 +11,7 @@ export const Background = styled.figure`
   top: 0;
   left: 0;
   margin: 0;
-  z-index: -1;
+  // z-index: -1;
   display: flex;
   flex-direction: column;
 `
@@ -25,15 +24,7 @@ export const BackgroundImage = styled.div<{ isMain: boolean }>`
   width: 100%;
   height: 100%;
   margin: 0;
-
-  background-color: transparent;
-  background-size: cover;
-  background-position: center;
-  background-image: url('/images/background-texture@1x.png');
-  
-  ${retina(2)} {
-    background-image: url('/images/background-texture@3x.png');
-  }
+  z-index: -50;
 
   ${(props) =>
     props.isMain &&
@@ -44,20 +35,20 @@ export const BackgroundImage = styled.div<{ isMain: boolean }>`
     `}
 `
 
-export const ColorMain = styled.div`
-  background: linear-gradient(270deg, #023268 0%, #258ad8 100%);
-  z-index: -1;
+const ColorBase = styled.div`
+  position: relative;
+  z-index: -100;
   flex-grow: 1;
 `
 
-export const ColorGrey = styled.div`
+export const ColorMain = styled(ColorBase)`
+  background-image: linear-gradient(270deg, #023268 0%, #258ad8 100%);
+`
+
+export const ColorGrey = styled(ColorBase)`
   background-color: #1a1a1a;
-  z-index: -1;
-  flex-grow: 1;
 `
 
-export const ColorBlue = styled.div`
+export const ColorBlue = styled(ColorBase)`
   background-color: #002d48;
-  z-index: -1;
-  flex-grow: 1;
 `
