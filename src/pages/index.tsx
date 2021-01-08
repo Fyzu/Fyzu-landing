@@ -70,7 +70,7 @@ export async function getStaticProps(): Promise<GetStaticPropsResult<IHomePagePr
 
     return {
       props: {
-        subs,
+        subs: subs.filter(({ name }) => name !== 'TheFyzu'),
       },
       revalidate: 60 * 60 * 24, // 1 day
     }
