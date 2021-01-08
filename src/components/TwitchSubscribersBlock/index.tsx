@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Slider, { Settings as SliderSettings } from 'react-slick'
+import { useInView } from 'react-intersection-observer'
+
 import { ITwitchSubscriber } from '@/interfaces'
 
 import {
@@ -23,25 +25,24 @@ export interface ISubscribersBlockProps {
   subs: ITwitchSubscriber[]
 }
 
+const SLIDER_SETTINGS: SliderSettings = {
+  dots: false,
+  centerPadding: '0',
+  infinite: true,
+  slidesToShow: 3,
+  speed: 1000,
+  rows: 3,
+  slidesPerRow: 1,
+  slidesToScroll: 1,
+  nextArrow: <></>,
+  prevArrow: <></>,
+}
+
 function TwitchSubscribersBlock(props: ISubscribersBlockProps) {
-  const settings: SliderSettings = {
-    accessibility: false,
-    dots: false,
-    lazyLoad: 'ondemand',
-    autoplay: true,
-    centerPadding: '0',
-    infinite: true,
-    slidesToShow: 3,
-    speed: 500,
-    rows: 3,
-    slidesPerRow: 1,
-    slidesToScroll: 1,
-    nextArrow: <></>,
-    prevArrow: <></>,
-  }
+  const [rootRef, isVisible] = useInView()
 
   return (
-    <Root>
+    <Root ref={rootRef}>
       <Header>
         <Image />
         <Title>
@@ -50,11 +51,11 @@ function TwitchSubscribersBlock(props: ISubscribersBlockProps) {
         </Title>
       </Header>
       <Content>
-        <Slider {...settings}>
+        <Slider {...SLIDER_SETTINGS} autoplay={isVisible}>
           {props.subs.map((sub) => (
             <SliderItem key={sub.name}>
               <User>
-                <UserAvatar src={sub.avatar} alt={sub.name} />
+                <UserAvatar avatar={isVisible ? sub.avatar : undefined} />
                 <UserName>{sub.name}</UserName>
               </User>
             </SliderItem>

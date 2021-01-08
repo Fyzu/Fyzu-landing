@@ -2,15 +2,15 @@ import React from 'react'
 import Image from 'next/image'
 import { Root, Background, BackgroundImage, ColorBlue, ColorGrey, ColorMain } from './styled'
 
-interface IBlockProps {
+export interface IBlockProps {
   color?: 'blue' | 'grey' | 'main'
   className?: string
   children?: React.ReactNode
 }
 
-function Block({ color = 'main', className, children }: IBlockProps) {
+function Block({ color = 'main', className, children }: IBlockProps, ref: any) {
   return (
-    <Root className={className}>
+    <Root ref={ref} className={className}>
       <Background>
         <BackgroundImage isMain={color === 'main'}>
           <Image src='/images/background-texture.png' layout='fill' />
@@ -29,4 +29,4 @@ function Block({ color = 'main', className, children }: IBlockProps) {
   )
 }
 
-export default Block
+export default React.forwardRef(Block)

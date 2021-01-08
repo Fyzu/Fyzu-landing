@@ -31,13 +31,15 @@ export const User = styled.div`
   margin-right: ${rem(50)};
 `
 
-export const UserAvatar = styled.img`
+export const UserAvatar = styled.div<{ avatar?: string }>`
   width: ${rem(96)};
   height: ${rem(96)};
   border-radius: 50%;
-  object-fit: cover;
+  background-image: url('${props => props.avatar || '/images/shuriken.svg'}');
+  background-size: cover;
+  background-position: center;
   border: ${rem(4)} solid #0B99F0;
-  background-color: #DDE4EA;
+  background-color: #111;
   box-shadow: 0 0 ${rem(9)} ${rem(3)} #1098EC;
   z-index: 1;
 `
