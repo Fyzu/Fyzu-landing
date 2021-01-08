@@ -13,7 +13,7 @@ const URL_MAP = {
 } as const
 
 function SocialButton({ social }: ISocialButtonProps) {
-  return <Root social={social} href={URL_MAP[social]} target="_blank" />
+  return <Root social={social} href={URL_MAP[social]} target="_blank" rel="noopener noreferrer" />
 }
 
 export default SocialButton

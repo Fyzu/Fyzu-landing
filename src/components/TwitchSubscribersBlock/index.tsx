@@ -49,7 +49,8 @@ function TwitchSubscribersBlock(props: ISubscribersBlockProps) {
   const subs = useMemo(() => {
     const itemsOnScreen = SLIDER_SETTINGS.rows || 1
 
-    const neededItems = (Math.ceil(props.subs.length / itemsOnScreen) * itemsOnScreen) - props.subs.length
+    const neededItems =
+      Math.ceil(props.subs.length / itemsOnScreen) * itemsOnScreen - props.subs.length
 
     return props.subs.concat(props.subs.slice(0, neededItems))
   }, [props.subs])

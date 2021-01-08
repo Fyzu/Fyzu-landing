@@ -12,7 +12,7 @@ export interface IButtonProps {
 
 function Button({ children, as, ...props }: IButtonProps) {
   return (
-    <Root as={as} {...props}>
+    <Root as={as} rel={props.href ? 'noopener noreferrer' : undefined} {...props}>
       {children}
     </Root>
   )
