@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import Slider, { Settings as SliderSettings } from 'react-slick'
 import { useInView } from 'react-intersection-observer'
 
