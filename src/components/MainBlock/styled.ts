@@ -14,6 +14,8 @@ export const Root = styled(Block).attrs({ color: 'main' })`
 export const Logo = styled.img.attrs({
   src: '/images/logo.svg',
   alt: 'Fyzu logo',
+  width: 631,
+  height: 631,
 })`
   height: ${rem(631)};
   width: ${rem(631)};
