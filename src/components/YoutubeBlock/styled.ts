@@ -60,8 +60,7 @@ export const Content = styled.div`
     height: 100%;
     min-height: ${rem(629)};
     background-color: #fff;
-    mix-blend-mode: color-dodge;
-    z-index: -1;
+    z-index: -60;
   }
 `
 
@@ -73,7 +72,6 @@ export const VideoWrapper = styled.div`
 export const Video = styled.iframe.attrs({
   height: '100%',
   width: '100%',
-  src: 'https://www.youtube.com/embed/wGQLjrRXy68',
   allow: 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture',
   allowfullscreen: true,
 })`
