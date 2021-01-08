@@ -1,14 +1,12 @@
 {
   "name": "Fyzu - Pro Apex Legends player",
   "short_name": "Fyzu",
-  "start_url": ".",
-  "display": "standalone",
+  "display": "fullscreen",
   "background_color": "#111",
-  "description": "Landing page about Fyzu",
+  "theme_color": "#ffffff",
   "icons": [
     {
-      "src": "/icon.svg",
-      "type": "image/svg"
+      "src": "/icon.svg"
     }
   ]
 }

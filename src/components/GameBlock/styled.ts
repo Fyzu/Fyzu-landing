@@ -24,7 +24,6 @@ export const Background = styled(Image).attrs({
 })`
   object-fit: cover;
   opacity: 0.3;
-  filter: grayscale(1);
   z-index: -10;
 `
 

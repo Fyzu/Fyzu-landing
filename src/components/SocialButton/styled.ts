@@ -14,6 +14,7 @@ export const Root = styled.a<{ social: Social }>`
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 0;
   color: ${(props) => props.theme.color.white};
   height: ${rem(165)};
   width: ${rem(165)};
