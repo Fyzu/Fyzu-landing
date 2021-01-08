@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Image from 'next/image'
 import Shuriken from '@/components/Shuriken'
 import Block from '@/components/Block'
 import { rem } from '@/utils'
@@ -10,18 +11,22 @@ export const Root = styled(Block).attrs({ color: 'grey' })`
   padding-top: ${rem(155)};
   padding-left: ${rem(183)};
   padding-right: ${rem(183)};
-
-  background-image: url('/images/fyzu-photo.png');
-  background-position: right bottom;
-  background-repeat: no-repeat;
-  background-size: auto 85%;
 `
 
 export const Photo = styled.div`
   position: absolute;
   right: 0;
   bottom: 0;
-  height: 85%;
+  height: 70%;
+  width: 100%;
+`
+
+export const PhotoImage = styled(Image).attrs({
+  src: '/images/fyzu-photo.png',
+  layout: 'fill',
+})`
+  object-fit: contain;
+  object-position: right;
 `
 
 export const HistoryWrapper = styled.ul`
